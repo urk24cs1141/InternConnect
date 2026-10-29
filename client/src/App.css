@@ -1,0 +1,594 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f7f8fc;
+  color: #20243a;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  min-height: 76px;
+  padding: 16px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: white;
+  border-bottom: 1px solid #e9eaf2;
+}
+
+.logo {
+  margin: 0;
+  font-size: 25px;
+  color: #222644;
+}
+
+.logo span,
+.hero h1 span {
+  color: #6955df;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a {
+  color: #555b70;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: #6955df;
+}
+
+.login-button,
+.search-box button {
+  border: none;
+  background: #6955df;
+  color: white;
+  border-radius: 9px;
+  padding: 12px 23px;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 75px 20px 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0edff, #ffffff 65%);
+}
+
+.tagline {
+  color: #6955df;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 53px);
+  line-height: 1.2;
+  margin: 18px 0;
+}
+
+.hero-text {
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #696e82;
+}
+
+.search-box {
+  display: flex;
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 7px;
+  gap: 10px;
+  background: white;
+  border: 1px solid #e5e4ef;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px #30245a0d;
+}
+
+.search-box input {
+  min-width: 0;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 38px;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hero-stats strong {
+  font-size: 24px;
+  color: #302b59;
+}
+
+.hero-stats span {
+  font-size: 13px;
+  color: #777b8d;
+}
+
+.internships-section {
+  max-width: 1120px;
+  margin: auto;
+  padding: 65px 24px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2,
+.about-section h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.section-heading p:not(.tagline) {
+  color: #777b8d;
+}
+
+.result-count,
+.category {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #eeebff;
+  color: #6955df;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.internship-card {
+  position: relative;
+  padding: 25px;
+  background: white;
+  border: 1px solid #e9eaf2;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px #30245a08;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px #30245a12;
+}
+
+.company-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  background: #eeebff;
+  color: #6955df;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.internship-card .category {
+  font-size: 11px;
+}
+
+.internship-card h3 {
+  margin: 18px 0 8px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.company-name {
+  color: #777b8d;
+  font-size: 14px;
+}
+
+.internship-details {
+  margin: 22px 0;
+  color: #62677a;
+  font-size: 13px;
+}
+
+.internship-details p {
+  margin: 12px 0;
+}
+
+.apply-button {
+  width: 100%;
+  padding: 13px;
+  background: white;
+  color: #6955df;
+  border: 1px solid #6955df;
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.apply-button:hover {
+  background: #6955df;
+  color: white;
+}
+
+.no-results {
+  padding: 35px;
+  text-align: center;
+  color: #777b8d;
+}
+
+.about-section {
+  padding: 65px 20px;
+  text-align: center;
+  background: #efedff;
+}
+
+.about-section > p:last-child {
+  max-width: 650px;
+  margin: 15px auto;
+  color: #686d82;
+  line-height: 1.8;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #24223e;
+  color: white;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .internship-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding: 16px 5%;
+  }
+
+  .hero-stats {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero {
+    padding-top: 50px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .hero-stats strong {
+    font-size: 19px;
+  }
+
+  .hero-stats span {
+    font-size: 11px;
+  }
+
+  .internship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-box button {
+    padding: 10px 15px;
+  }
+}
+
+
+.refresh-button {
+  padding: 10px 18px;
+  border: 1px solid #6955df;
+  border-radius: 9px;
+  background: white;
+  color: #6955df;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.status-message {
+  margin: 20px 0;
+  padding: 14px;
+  border-radius: 9px;
+  background: #eeebff;
+  color: #45369e;offset-block-end: ;
+  line-height: 1.6;
+}
+
+.add-section {
+  padding: 60px 24px;
+  background: white;
+  text-align: center;
+}
+
+.add-section h2 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.add-section > p:not(.tagline) {
+  color: #777b8d;
+  line-height: 1.7;
+}
+
+.internship-form {
+  max-width: 750px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  text-align: left;
+}
+
+.internship-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #41465c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.internship-form input,
+.internship-form select,
+.internship-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #dfe1eb;
+  border-radius: 8px;
+  background: white;
+  color: #20243a;
+  outline: none;
+  font: inherit;
+}
+
+.internship-form input:focus,
+.internship-form select:focus,
+.internship-form textarea:focus {
+  border-color: #6955df;
+}
+
+.internship-form textarea {
+  resize: vertical;
+}
+
+.internship-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.internship-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .internship-form {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-form .full-width {
+    grid-column: auto;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Student application form */
+.application-section {
+  padding: 55px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.application-section h2 {
+  margin: 12px 0;
+}
+
+.application-section > p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.application-company {
+  margin-bottom: 25px;
+}
+
+.application-section .internship-form {
+  max-width: 650px;
+  margin: 25px auto 0;
+  text-align: left;
+}
+
+.resume-help {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cancel-button {
+  padding: 12px;
+  border: 1px solid #6550f5;
+  border-radius: 6px;
+  background: white;
+  color: #6550f5;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: #f1efff;
+}
+
+
+/* Improved Student Application Form */
+.application-section {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f2efff, #ffffff);
+}
+
+.application-section .section-heading {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.application-section .section-heading h2 {
+  color: #252344;
+  font-size: 32px;
+}
+
+.application-section .section-heading p {
+  line-height: 1.7;
+}
+
+.application-section .application-company {
+  display: inline-block;
+  margin-top: 0;
+  padding: 7px 16px;
+  border-radius: 20px;
+  background: #eeebff;
+  color: #6955df;
+  font-weight: 600;
+}
+
+.application-section .internship-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e6e1ff;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px rgba(48, 36, 90, 0.10);
+}
+
+.application-section .internship-form label {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #302b59;
+}
+
+.application-section .internship-form input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dcd9eb;
+  border-radius: 9px;
+  background: #fcfbff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.application-section .internship-form input:focus {
+  border-color: #6955df;
+  box-shadow: 0 0 0 3px rgba(105, 85, 223, 0.12);
+  outline: none;
+}
+
+.application-section .resume-help {
+  margin: 0 0 12px;
+  color: #777b8d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.application-section .status-message {
+  overflow-wrap: anywhere;
+}
+
+.application-section .apply-button {
+  margin-top: 8px;
+  padding: 14px;
+  background: #6955df;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  transition: background 0.2s;
+}
+
+.application-section .apply-button:hover {
+  background: #5140bf;
+}
+
+.application-section .cancel-button {
+  padding: 13px;
+  border-color: #dcd9eb;
+  border-radius: 9px;
+  color: #55516f;
+}
+
+.application-section .cancel-button:hover {
+  background: #f5f3ff;
+}
+
+@media (max-width: 600px) {
+  .application-section .internship-form {
+    padding: 22px 18px;
+  }
+
+  .application-section .section-heading h2 {
+    font-size: 26px;
+  }
+}
